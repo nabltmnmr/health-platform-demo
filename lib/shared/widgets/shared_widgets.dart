@@ -1,0 +1,19 @@
+// Shared widgets barrel export.
+export 'metric_card.dart';
+export 'section_card.dart';
+export 'status_chip.dart';
+export 'app_search_bar.dart';
+export 'empty_state.dart';
+export 'role_switch_tile.dart';
+export 'hero_dashboard_card.dart';
+export 'patient_header_card.dart';
+export 'ticket_qr_card.dart';
+export 'fefo_warning_banner.dart';
+export 'demand_signal_chip.dart';
+export 'recommendation_card.dart';
+export 'queue_row.dart';
+export 'step_timeline.dart';
+export 'medication_availability_row.dart';
+export 'brand_alternatives_card.dart';
+export 'supply_request_card.dart';
+export 'filter_chips.dart';
