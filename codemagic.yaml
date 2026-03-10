@@ -11,29 +11,26 @@ workflows:
       flutter: stable
       xcode: latest
       cocoapods: default
-
       ios_signing:
         distribution_type: app_store
         bundle_identifier: com.noor.healthcare
-
-      vars:
-        APP_ID: "0000000000"
 
     scripts:
       - name: Get Flutter packages
         script: |
           flutter pub get
 
-      - name: Set up code signing
+      - name: Apply provisioning profiles
         script: |
           xcode-project use-profiles
 
       - name: Build IPA
         script: |
-          flutter build ipa --release
+          flutter build ipa --release --export-options-plist=/Users/builder/export_options.plist
 
     artifacts:
       - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
 
     publishing:
       app_store_connect:
