@@ -13,7 +13,7 @@ workflows:
       cocoapods: default
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.noor.healthcare
+        bundle_identifier: com.noor.healthCare
 
     scripts:
       - name: Get Flutter packages
@@ -22,7 +22,7 @@ workflows:
 
       - name: Apply provisioning profiles
         script: |
-          xcode-project use-profiles
+          xcode-project use-profiles --project ios/Runner.xcodeproj
 
       - name: Build IPA
         script: |
